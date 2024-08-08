@@ -1,0 +1,136 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pretendard-Regular', Arial, sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 430px;
+    height: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logo {
+    background-image: url(../icon/JBTI.png);
+    width: 180px; 
+    height: 120px;
+    background-size: contain;
+    background-repeat: no-repeat; 
+    background-position: center; 
+    margin: auto;    
+    margin-bottom: 20px;
+    margin-top: 150px;
+    display: block;
+}
+
+.MBTI {
+    width: 400px;
+    height: 240px;
+    background: #ff7b2e;
+    transition: background 0.3s ease;
+    font-weight: bold;
+    padding: 10px;
+    color: white; 
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-container {
+    margin-top: 5px;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+    align-items: center;
+}
+
+#jbti2 {
+    width: 200px;
+    height: 200px;
+    display: flex;
+}
+
+.box {
+    display: flex; 
+    justify-content: space-around; 
+    margin-top: 40px;
+}
+
+.JOB {
+    margin-right: 20px;
+}
+
+.Mypage {
+    margin-left: 20px;
+}
+
+.JOB, .Mypage {
+    background-color: #ff7b2e;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+    padding: 10px; 
+    box-sizing: border-box; 
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Pretendard', sans-serif;
+    margin-bottom: 220px;
+    color: white; 
+    border: none;
+}
+.text-container > h2 {
+    font-size: 4em;
+}
+
+.text-container > p {
+    font-size: 2em;
+}
+
+.JOB > h2, .Mypage > h2 {
+    font-size: 3em; 
+    margin: 0;
+    padding: 0;    
+}
+
+.JOB > p, .Mypage > p {
+    font-size: 1.5em; 
+    margin: 0;
+    padding: 0;
+}
+
+.MBTI:hover { background-color: #d0672a;
+}
+
+.JOB:hover, .Mypage:hover {
+    background-color: #d0672a;
+}
