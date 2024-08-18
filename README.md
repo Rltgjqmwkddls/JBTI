@@ -7,12 +7,12 @@
 ##### 기간: 24.06.01~24.08.02
 
 ## ⚙️Skills & Tools
-Backend: <img src="https://img.shields.io/badge/Fast API-26a699?style=for-the-badge&logo=Fast API&logoColor=white"/>
-<img src="https://img.shields.io/badge/Python-3572A5?style=for-the-badge&logo=Python&logoColor=white"/>
+Backend: <img src="https://img.shields.io/badge/Fast API-26a699?style=flat-square&logo=Fast API&logoColor=white"/>
+<img src="https://img.shields.io/badge/Python-3572A5?style=flat-square&logo=Python&logoColor=white"/>
 </br>
-Frontend: <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white"/>
-<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white"/>
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white"/>
+Frontend: <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/>
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=white"/>
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white"/>
 
 ## ☄️ 프로젝트 기획
 ### **직장인들의 퇴사 유무 무엇인가?**
