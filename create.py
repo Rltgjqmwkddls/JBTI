@@ -1,17 +1,14 @@
-import pandas as pd
+import os
+import re
 import json
 import openai
+import certifi # CA 파일 경로 제공
 import logging
 import datetime
+import pandas as pd
+import numpy as np
 from pymongo import MongoClient
-from sklearn.metrics.pairwise import cosine_similarity
-import re  
-# from soynlp.normalizer import repeat_normalize
-# from soynlp.tokenizer import LTokenizer
-import numpy as np  
-import os
-
-import certifi
+from sklearn.metrics.pairwise import cosine_similarity # 코사인 유사도
 
 ca = certifi.where()
 
@@ -98,7 +95,6 @@ def prepare_data(config, client):
         job_detail_df['processed_직업 설명'] = job_detail_df['직업 설명'].apply(preprocess_text)
         job_detail_df['processed_직무'] = job_detail_df['직무'].apply(preprocess_text)
 
-        logging.info("데이터 준비 완료")
         return mbti_detail_df, holland_result_df, job_detail_df
     except Exception as e:
         logging.error(f"데이터 준비 중 오류 발생: {e}")
@@ -142,8 +138,6 @@ def generate_results(mbti_detail_df, holland_result_df, mbti_embeddings, holland
             'Similarity Score': best_score
         }
         results.append(result)
-        logging.info(f"Generated result for MBTI {result['MBTI']}: {result}")
-    logging.info(f"Total results generated: {len(results)}")
     return results
 
 # 최종 결과 생성 함수
@@ -155,19 +149,14 @@ def final_results(user_mbti, user_job, mbti_detail_df, job_detail_df, mbti_embed
         available_mbti = [result['MBTI'] for result in results]
         return f"사용자의 MBTI({user_mbti})에 해당하는 결과를 찾을 수 없습니다. 사용 가능한 MBTI 유형: {', '.join(available_mbti)}"
 
-    logging.info(f"Found user result for MBTI {user_mbti}: {user_result}")
-
     user_mbti_indices = mbti_detail_df.index[mbti_detail_df['유형'].str.upper() == user_mbti.upper()].tolist()
     
     if not user_mbti_indices:
         return f"사용자의 MBTI({user_mbti})에 해당하는 결과를 찾을 수 없습니다."
     user_mbti_idx = user_mbti_indices[0]
-    logging.info(f"Found MBTI index: {user_mbti_idx}")
 
     user_mbti_emb = mbti_embeddings[user_mbti_idx].reshape(1, -1)
     similarities = cosine_similarity(user_mbti_emb, job_embeddings).flatten()
-
-    logging.info(f"Calculated similarities for {user_mbti}: min={min(similarities)}, max={max(similarities)}, mean={sum(similarities) / len(similarities)}")
 
     processed_user_job = preprocess_text(user_job)
 
@@ -185,9 +174,6 @@ def final_results(user_mbti, user_job, mbti_detail_df, job_detail_df, mbti_embed
 
     top_3_jobs_list = [row['직무'] for _, row in top_3_jobs.iterrows()]
     top_3_similarities = similarities[top_3_jobs_idx] * 100  # Convert to percentage
-
-    logging.info(f"Top 3 jobs: {top_3_jobs_list}")
-    logging.info(f"Top 3 similarities: {top_3_similarities}")
 
     initial_response = [
         f"사용자님의 MBTI {user_mbti}는 {user_job} 직업과 {user_job_similarity:.2f}% 정도의 유사도를 보여줍니다.",
@@ -221,7 +207,6 @@ def save_results_to_collection(client: MongoClient, db_name: str, collection_nam
     response['expireAt'] = expire_at
     try:
         collection.insert_one(response)
-        logging.info(f"Saved response to MongoDB collection '{collection_name}' in database '{db_name}'")
     except Exception as e:
         logging.error(f"MongoDB 컬렉션 '{collection_name}'에 응답 저장 실패: {e}")
         raise e
