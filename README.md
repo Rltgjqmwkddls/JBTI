@@ -62,3 +62,6 @@ Frontend: <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&
 
 ## 😣트러블슈팅
 <img width="100%" alt="image" src="https://github.com/user-attachments/assets/377d91ff-ee3c-432a-a048-3b7409edad2e">
+
+## 🤗실행화면
+![JBTI](https://github.com/user-attachments/assets/0033bb3d-8ae7-4053-8892-33616f7882ba)
