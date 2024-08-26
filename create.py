@@ -225,7 +225,7 @@ def main(user_mbti, user_job):
 
         mbti_embeddings, holland_embeddings, job_embeddings = load_embeddings_from_mongodb(client, config['mongodb']['db_name'], 'embeddings_collection')
         
-        # 파인튜닝된 모델 ID 설정
+        # 파인튜닝된 gpt 3.5 model
         fine_tuned_model = "ft:gpt-3.5-turbo-0125:personal::9qa3DaXk"
         
         results = generate_results(mbti_detail_df, holland_result_df, mbti_embeddings, holland_embeddings, fine_tuned_model)
