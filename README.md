@@ -7,7 +7,7 @@
 ##### 기간: 24.06.01~24.08.02
 
 ## ⚙️Skills & Tools
-Backend: <img src="https://img.shields.io/badge/Fast API-26a699?style=flat-square&logo=Fast API&logoColor=white"/>
+Backend: <img src="https://img.shields.io/badge/GPT-3.5-009688?style=flat-square&logo=OpenAI&logoColor=white"/>
 <img src="https://img.shields.io/badge/Python-3572A5?style=flat-square&logo=Python&logoColor=white"/>
 </br>
 Frontend: <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/>
