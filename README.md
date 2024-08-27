@@ -13,6 +13,8 @@ Backend: <img src="https://img.shields.io/badge/Fast API-26a699?style=flat-squar
 Frontend: <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/>
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=white"/>
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white"/>
+NLP Model: <img src="https://img.shields.io/badge/GPT-3.5-brightgreen?style=flat-square"/>
+
 
 ## ☄️ 프로젝트 기획
 ### **직장인들의 퇴사 유무 무엇인가?**
