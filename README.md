@@ -14,7 +14,7 @@ Frontend: <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=white"/>
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white"/>
 </br>
-NLP Model: <img src="https://img.shields.io/badge/GPT3.5-00C7B7?style=flat-square&logo=OpenAI&logoColor=white"/>
+NLP Model: <img src="https://img.shields.io/badge/GPT3.5-000000?style=flat-square&logo=OpenAI&logoColor=white"/>
 
 
 ## ☄️ 프로젝트 기획
