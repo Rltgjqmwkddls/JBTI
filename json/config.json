@@ -2,7 +2,6 @@
   "mongodb": {
     "uri": "mongodb+srv://zzcv00:dwiqPBh62FHd1sLb@coffee.ntxtbdl.mongodb.net/?retryWrites=true&w=majority&appName=coffee",
     "db_name": "lkj", 
-    # 해당 컬렉션들,
     "collections": {
       "mbti_detail": "mbti_detail",
       "holland_result": "holland_result",
