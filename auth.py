@@ -16,13 +16,16 @@ ACCESS_TOKEN_EXPIRE_MINUTES = 30
 # pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
+# DB에 사용자 검색 함수
 async def get_user(db, userid: str):
     user = await db["users"].find_one({"userid": userid})
     if user:
         return UserInDB(**user)
     return None
 
+# 현재 사용자 인증 함수
 async def get_current_user(token: str = Depends(oauth2_scheme)):
+    # 인증에 실패한 경우 401코드 반환
     credentials_exception = HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
         detail="Could not validate credentials",
